@@ -13,3 +13,15 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require jquery_ujs
+
+$(document).ready(function(){
+    $(document).on("click", ".loader", function(){
+        $('.testest').hide();
+        $('.loader').removeClass('uk-text-success');
+        $(this).addClass('uk-text-success');
+        $(this).next('td').css({"display": "block"});
+        $(this).next('td').css({"overflow": "visible"});        
+    });
+})
